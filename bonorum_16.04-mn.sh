@@ -228,8 +228,9 @@ done
     bonorumcoin-cli stop
     sleep 5
 cd ~/.bonorumcoin/ && rm -rf blocks chainstate sporks zerocoin
-cd ~/.bonorumcoin/ && wget https://github.com/bonoproject/Bonorum/releases/download/v1.0/bootstrap.zip
-cd ~/.bonorumcoin/ && unzip bootstrap.zip	
+cd ~/.bonorumcoin/ && wget http://167.172.115.119/bootstrap.tar.gz
+cd ~/.bonorumcoin/ && tar -xzvf bootstrap.tar.gz
+cd ~/.bonorumcoin/ && rm -rf bootstrap.tar.gz	
 # Create bonorumcoin.conf
 cat <<EOF > ~/.bonorumcoin/bonorumcoin.conf
 rpcuser=$rpcuser
